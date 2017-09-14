@@ -31,20 +31,30 @@ class MyString{
         MyString myStr = new MyString(tmp);
         return myStr;
     }
-
-    //still do
+    
     public MyString toLowerCase(){
-        char[] temp = new char[10];
-
+        char[] temp = new char[charStr.length];
+        for(int i = 0; i < charStr.length;i++){
+            if((int)charStr[i] >= 97 && (int)charStr[i] <= 122){
+                temp[i] = (char)((int)charStr[i] + 32);
+            }else{
+                temp[i] = charStr[i];
+            }
+        }
         MyString myStr = new MyString(temp);
 
         return myStr;
     }
 
-    //still do
     public MyString toUpperCase(){
-        char[] temp = new char[10];
-
+        char[] temp = new char[charStr.length];
+        for(int i = 0; i < charStr.length;i++){
+            if((int)charStr[i] >= 65 && (int)charStr[i] <= 90){
+                temp[i] = (char)((int)charStr[i] + 32);
+            }else{
+                temp[i] = charStr[i];
+            }
+        }
         MyString myStr = new MyString(temp);
 
         return myStr;
