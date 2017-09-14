@@ -34,12 +34,20 @@ class MyString{
 
     //still do
     public MyString toLowerCase(){
+        char[] temp = new char[10];
 
+        MyString myStr = new MyString(temp);
+
+        return myStr;
     }
 
     //still do
     public MyString toUpperCase(){
+        char[] temp = new char[10];
 
+        MyString myStr = new MyString(temp);
+
+        return myStr;
     }
 
     public boolean equals(MyString s){
