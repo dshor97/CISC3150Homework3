@@ -32,15 +32,15 @@ class MyString{
         return myStr;
     }
 
-    /*
+    //still do
     public MyString toLowerCase(){
 
     }
 
+    //still do
     public MyString toUpperCase(){
 
     }
-    */
 
     public boolean equals(MyString s){
         if(charStr.length != s.charStr.length){
@@ -69,6 +69,7 @@ class MyString{
         return temp;
     }
 
+    //still do
     public static MyString valueOf(int i){
         char[] temp = new char[10];
 
