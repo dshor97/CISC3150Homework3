@@ -29,7 +29,6 @@ class MyString{
         return myStr;
     }
     /*
-
     public MyString toLowerCase(){
         char[] temp = new char[charStr.length];
 
@@ -37,11 +36,28 @@ class MyString{
     public MyString toUpperCase(){
 
     }
+    */
     public boolean equals(MyString s){
-
+        if(charStr.length != s.charStr.length){
+            return false;
+        }else {
+            for (int i = 0; i < charStr.length; i++){
+                if(charStr[i] != s.charStr[i]){
+                    return false;
+                }
+            }
+        }
+        return true;
     }
     public MyString getMyString(){
+        char[] temp = new char[charStr.length];
+        for(int i = 0;i<charStr.length;i++){
+            temp[i] = charStr[i];
+        }
 
+        MyString myStr = new MyString(temp);
+
+        return myStr;
     }
     public String toString(){
 
@@ -50,7 +66,6 @@ class MyString{
 
     }
 
-    */
 
 
 
