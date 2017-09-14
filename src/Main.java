@@ -32,9 +32,12 @@ class MyString{
         return myStr;
     }
 
-    /*
+
     public MyString toLowerCase(){
         char[] temp = new char[charStr.length];
+        for(int i = 0; i < temp.length; i++){
+            
+        }
 
     }
 
@@ -42,7 +45,6 @@ class MyString{
 
     }
 
-    */
     public boolean equals(MyString s){
         if(charStr.length != s.charStr.length){
             return false;
@@ -67,15 +69,11 @@ class MyString{
 
     public String toString(){
         String temp = new String(charStr);
-
         return temp;
     }
-    
+
     public static MyString valueOf(int i){
 
     }
-
-
-
 
 }
