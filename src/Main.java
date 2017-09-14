@@ -31,7 +31,7 @@ class MyString{
         MyString myStr = new MyString(tmp);
         return myStr;
     }
-    
+
     public MyString toLowerCase(){
         char[] temp = new char[charStr.length];
         for(int i = 0; i < charStr.length;i++){
