@@ -1,3 +1,6 @@
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
 public class Main {
     public static void main(String[] args){
 
@@ -20,12 +23,13 @@ class MyString{
     }
 
     public int length(){
-        return charStr.length;
+        int temp = charStr.length;
+        return temp;
     }
 
     public MyString substring(int begin, int end){
-        char[] tmp = new char[end - begin];
-        for(int i = 0; i<(end - begin); i++){
+        char[] tmp = new char[end - begin + 1];
+        for(int i = 0; i< tmp.length; i++){
             tmp[i] = charStr[begin + i];
         }
         MyString myStr = new MyString(tmp);
@@ -42,7 +46,6 @@ class MyString{
             }
         }
         MyString myStr = new MyString(temp);
-
         return myStr;
     }
 
@@ -56,7 +59,6 @@ class MyString{
             }
         }
         MyString myStr = new MyString(temp);
-
         return myStr;
     }
 
@@ -89,10 +91,7 @@ class MyString{
 
     //still do
     public static MyString valueOf(int i){
-        char[] temp = new char[10];
-
-        MyString myStr = new MyString(temp);
-        return myStr;
+        
     }
 
 }
