@@ -70,6 +70,8 @@ public class Main {
         System.out.println("Testing getMyString(): ");
         MyString four = three.getMyString();
         System.out.println(four);
+
+
     }
 }
 
@@ -155,10 +157,8 @@ class MyString{
         return temp;
     }
 
-    /*
     public static MyString valueOf(int i){
-
+        
     }
-    */
 
 }
