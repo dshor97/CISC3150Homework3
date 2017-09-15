@@ -2,17 +2,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        String s1 = new String("House");
-        String s2 = new String("Phone");
+        String s1 = new String("Phone");
+        String s2 = new String("House");
         String s3 = new String("TELEPHONE");
 
         MyString one = new MyString(s1.toCharArray());
         MyString two = new MyString(s2.toCharArray());
         MyString three = new MyString(s3.toCharArray());
 
-        System.out.println(one);
-        System.out.println(two);
-        System.out.println(three);
+        System.out.println("MyString one is: " + one);
+        System.out.println("MyString two is: " + two);
+        System.out.println("MyString three is: " + three);
 
         System.out.println();
 
@@ -20,10 +20,51 @@ public class Main {
         two = two.toUpperCase();
         three = three.toLowerCase();
 
+        System.out.println("Changing MyString one to lower case: ");
         System.out.println(one);
+        System.out.println();
+
+        System.out.println("Changing MyString two to upper case: ");
         System.out.println(two);
+        System.out.println();
+
+        System.out.println("Changing MyString three to lower case: ");
+        System.out.println(three);
+        System.out.println();
+
+        System.out.println("MyString three before substring(4,8): ");
         System.out.println(three);
 
+        three = three.substring(4,8);
+        System.out.println();
+
+        System.out.println("MyString three after substring(4,8): ");
+        System.out.println(three);
+
+        System.out.println();
+
+        System.out.println("Test MyString equals function: ");
+        boolean test1 = three.equals(one);
+        boolean test2 = one.equals(two);
+
+        if(test1){
+            System.out.println(one + " and " + three + " are equal.");
+        }else{
+            System.out.println(one + " and " + three + " are not equal.");
+        }
+        if(test2){
+            System.out.println(one + " and " + two + " are equal.");
+
+        }else{
+            System.out.println(one + " and " + two + " are not equal.");
+        }
+
+        System.out.println();
+        System.out.println("Testing charAt() function: ");
+
+        for(int i =0; i < one.length(); i++){
+            System.out.println("Char at " + i + " is: " + one.charAt(i));
+        }
     }
 }
 
@@ -109,18 +150,10 @@ class MyString{
         return temp;
     }
 
-    //still do
+    /*
     public static MyString valueOf(int i){
-        char[] temp = new char[Integer.toString(i).length()];
-        Scanner scanner = new Scanner(Integer.toString(i));
-        scanner.useDelimiter("");
-        int count = 0;
-        while(scanner.hasNext()){
-            temp[count] = (char)(scanner.nextByte(i));
-            count++;
-        }
-        MyString tmp = new MyString(temp);
-        return tmp;
+
     }
+    */
 
 }
