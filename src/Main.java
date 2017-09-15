@@ -71,9 +71,10 @@ public class Main {
         MyString four = three.getMyString();
         System.out.println(four);
 
+        int r = 128439234;
         System.out.println();
-        System.out.println("Testing value of: ");
-        MyString string = MyString.valueOf(128439234);
+        System.out.println("Testing valueOf(): ");
+        MyString string = MyString.valueOf(r);
         System.out.println(string);
 
     }
