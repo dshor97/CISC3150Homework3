@@ -71,7 +71,10 @@ public class Main {
         MyString four = three.getMyString();
         System.out.println(four);
 
-        MyString string = MyString.valueOf(12342);
+        System.out.println();
+        System.out.println("Testing value of: ");
+        MyString string = MyString.valueOf(128439234);
+        System.out.println(string);
 
     }
 }
@@ -162,9 +165,41 @@ class MyString{
         char[] a = new char[Integer.toString(i).length()];
         Scanner scanner = new Scanner(Integer.toString(i)).useDelimiter("");
         int c = 0;
+        int x;
         while(scanner.hasNext()){
-            a[c] = (char)(scanner.nextInt());
-            System.out.println(a[c]);
+            x = scanner.nextInt();
+            switch(x){
+                case 0:
+                    a[c] = '0';
+                    break;
+                case 1:
+                    a[c] = '1';
+                    break;
+                case 2:
+                    a[c] = '2';
+                    break;
+                case 3:
+                    a[c] = '3';
+                    break;
+                case 4:
+                    a[c] = '4';
+                    break;
+                case 5:
+                    a[c] = '5';
+                    break;
+                case 6:
+                    a[c] = '6';
+                    break;
+                case 7:
+                    a[c] = '7';
+                    break;
+                case 8:
+                    a[c] = '8';
+                    break;
+                case 9:
+                    a[c] = '9';
+                    break;
+            }
             c++;
         }
         MyString string = new MyString(a);
