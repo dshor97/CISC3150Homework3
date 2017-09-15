@@ -31,7 +31,7 @@ Char at 4 is: e
 Testing getMyString():
 phone
 
-Testing value of:
+Testing valueOf():
 128439234
 
 Process finished with exit code 0
