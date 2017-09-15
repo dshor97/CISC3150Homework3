@@ -65,6 +65,11 @@ public class Main {
         for(int i =0; i < one.length(); i++){
             System.out.println("Char at " + i + " is: " + one.charAt(i));
         }
+
+        System.out.println();
+        System.out.println("Testing getMyString(): ");
+        MyString four = three.getMyString();
+        System.out.println(four);
     }
 }
 
