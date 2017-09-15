@@ -1,0 +1,37 @@
+MyString one is: Phone
+MyString two is: House
+MyString three is: TELEPHONE
+
+Changing MyString one to lower case:
+phone
+
+Changing MyString two to upper case:
+HOUSE
+
+Changing MyString three to lower case:
+telephone
+
+MyString three before substring(4,8):
+telephone
+
+MyString three after substring(4,8):
+phone
+
+Test MyString equals function:
+phone and phone are equal.
+phone and HOUSE are not equal.
+
+Testing charAt() function:
+Char at 0 is: p
+Char at 1 is: h
+Char at 2 is: o
+Char at 3 is: n
+Char at 4 is: e
+
+Testing getMyString():
+phone
+
+Testing value of:
+128439234
+
+Process finished with exit code 0
