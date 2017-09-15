@@ -163,6 +163,7 @@ class MyString{
         Scanner scanner = new Scanner(Integer.toString(i)).useDelimiter("");
         int c = 0;
         while(scanner.hasNext()){
+            a[c] = (char)(scanner.nextInt());
             System.out.println(a[c]);
             c++;
         }
