@@ -71,6 +71,7 @@ public class Main {
         MyString four = three.getMyString();
         System.out.println(four);
 
+        MyString string = MyString.valueOf(12342);
 
     }
 }
@@ -158,7 +159,16 @@ class MyString{
     }
 
     public static MyString valueOf(int i){
-        
+        char[] a = new char[Integer.toString(i).length()];
+        Scanner scanner = new Scanner(Integer.toString(i)).useDelimiter("");
+        int c = 0;
+        while(scanner.hasNext()){
+            a[c] = (char)scanner.nextInt();
+            System.out.println(a[c]);
+            c++;
+        }
+        MyString string = new MyString(a);
+        return string;
     }
 
 }
