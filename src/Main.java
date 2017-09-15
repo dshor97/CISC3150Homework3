@@ -1,8 +1,28 @@
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args){
+        String s1 = new String("House");
+        String s2 = new String("Phone");
+        String s3 = new String("TELEPHONE");
+
+        MyString one = new MyString(s1.toCharArray());
+        MyString two = new MyString(s2.toCharArray());
+        MyString three = new MyString(s3.toCharArray());
+
+        System.out.println(one);
+        System.out.println(two);
+        System.out.println(three);
+
+        System.out.println();
+
+        one = one.toLowerCase();
+        two = two.toUpperCase();
+        three = three.toLowerCase();
+
+        System.out.println(one);
+        System.out.println(two);
+        System.out.println(three);
 
     }
 }
@@ -39,7 +59,7 @@ class MyString{
     public MyString toLowerCase(){
         char[] temp = new char[charStr.length];
         for(int i = 0; i < charStr.length;i++){
-            if((int)charStr[i] >= 97 && (int)charStr[i] <= 122){
+            if((int)charStr[i] >= 65 && (int)charStr[i] <= 90){
                 temp[i] = (char)((int)charStr[i] + 32);
             }else{
                 temp[i] = charStr[i];
@@ -52,8 +72,8 @@ class MyString{
     public MyString toUpperCase(){
         char[] temp = new char[charStr.length];
         for(int i = 0; i < charStr.length;i++){
-            if((int)charStr[i] >= 65 && (int)charStr[i] <= 90){
-                temp[i] = (char)((int)charStr[i] + 32);
+            if((int)charStr[i] >= 97 && (int)charStr[i] <= 122){
+                temp[i] = (char)((int)charStr[i] - 32);
             }else{
                 temp[i] = charStr[i];
             }
@@ -91,7 +111,16 @@ class MyString{
 
     //still do
     public static MyString valueOf(int i){
-        
+        char[] temp = new char[Integer.toString(i).length()];
+        Scanner scanner = new Scanner(Integer.toString(i));
+        scanner.useDelimiter("");
+        int count = 0;
+        while(scanner.hasNext()){
+            temp[count] = (char)(scanner.nextByte(i));
+            count++;
+        }
+        MyString tmp = new MyString(temp);
+        return tmp;
     }
 
 }
